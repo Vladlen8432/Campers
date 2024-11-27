@@ -1,0 +1,49 @@
+.home {
+  background-image: url("../../images/home/bg-img.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  padding: 37vh 0 37vh 4.4vw;
+}
+
+.titleHome {
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  color: #f7f7f7;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 2.3vh;
+}
+
+.descriptionHome {
+  color: #f7f7f7;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 5.7vh;
+}
+
+.buttonHome {
+  display: flex;
+  width: 173px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: #e44848;
+  border-radius: 200px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonHome:hover,
+.buttonHome:focus {
+  background-color: #d84343;
+}
