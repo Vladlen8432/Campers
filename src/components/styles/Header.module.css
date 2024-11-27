@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 28px 0 28px 64px;
+}
+
+.logo {
+  width: 9.44vw;
+  height: auto;
+}
+
+.nav {
+  margin-left: 31.25vw;
+}
+
+.list {
+  display: flex;
+  gap: 2.2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.link {
+  transition: color 0.3s ease;
+}
+
+.active {
+  color: #d84343;
+}
