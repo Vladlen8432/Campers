@@ -2,7 +2,7 @@ import { useState } from "react";
 import css from "./styles/Catalog.module.css";
 import { useEffect } from "react";
 import { fetchCampers } from "../services/api";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Catalog = () => {
   const [campers, setCampers] = useState([]);
@@ -42,39 +42,57 @@ const Catalog = () => {
       </div>
 
       <div className={css.containerContent}>
-        <ul>
-          {campers.length > 0 ? (
-            <ul>
-              {campers.map((camper) => (
-                <li className={css.listItemCamper} key={camper.id}>
-                  {/* <Link to={`/campers/${camper.id}`}>{camper.name}</Link> */}
-                  <img
-                    className={css.imageCamper}
-                    src={camper.gallery[0].thumb}
-                    alt="camper"
-                  />
-                  <div className={css.camperOverlay}>
-                    <div className={css.namePrice}>
-                      <h2>{camper.name}</h2>
-                      <div className={css.priceFavorite}>
-                        <h2 className={css.price}>{camper.price}</h2>
-                        <img src="" alt="heart" />
-                      </div>
+        {campers.length > 0 ? (
+          <ul className={css.listCamper}>
+            {campers.map((camper) => (
+              <li className={css.listItemCamper} key={camper.id}>
+                <img
+                  className={css.imageCamper}
+                  src={camper.gallery[0].thumb}
+                  alt="camper"
+                />
+                <div className={css.camperOverlay}>
+                  <div className={css.namePrice}>
+                    <h2>{camper.name}</h2>
+                    <div className={css.priceFavorite}>
+                      <h2 className={css.price}>{camper.price}</h2>
+                      <img src="" alt="heart" />
                     </div>
-                    <p className={css.camperDescription}>{camper.description}</p>
-                    <form>
-                      <input type="checkbox" />
-                      <input type="checkbox" />
-                      <input type="checkbox" />
-                    </form>
                   </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No campers found.</p>
-          )}
-        </ul>
+
+                  <p className={css.camperDescription}>{camper.description}</p>
+
+                  <div className={css.featureContainer}>
+                    {[
+                      { label: camper.transmission },
+                      { label: camper.engine },
+                      { label: "Air Conditioning", condition: camper.AC },
+                      { label: "Bathroom", condition: camper.bathroom },
+                      { label: "Kitchen", condition: camper.kitchen },
+                      { label: "TV", condition: camper.TV },
+                      { label: "Radio", condition: camper.radio },
+                      { label: "Refrigerator", condition: camper.refrigerator },
+                      { label: "Microwave", condition: camper.microwave },
+                      { label: "Gas", condition: camper.gas },
+                      { label: "Water", condition: camper.water },
+                    ]
+                      .filter(
+                        (item) => item.condition === undefined || item.condition
+                      )
+                      .map((item, index) => (
+                        <div key={index} className={css.featureItem}>
+                          <p className={css.featureText}>{item.label}</p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+                <Link to={`/campers/:camperId`}>Show more</Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No campers found.</p>
+        )}
       </div>
     </div>
   );

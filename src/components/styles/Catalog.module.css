@@ -3,6 +3,8 @@
   gap: 4.4vw;
   padding-right: 4.4vw;
   padding-left: 4.4vw;
+  padding-top: 48px;
+  padding-bottom: 52px;
 }
 
 .containerFilter {
@@ -11,14 +13,21 @@
 }
 
 .containerContent {
-  background-color: chartreuse;
   width: 100%;
+}
+
+.listCamper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
 }
 
 .listItemCamper {
   display: flex;
   gap: 1.7vw;
   padding: 1.7vw;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
 }
 
 .imageCamper {
@@ -34,9 +43,21 @@
 .namePrice {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .priceFavorite {
   display: flex;
+  align-items: center;
   gap: 1vw;
+}
+
+.camperDescription {
+  margin-bottom: 24px;
+}
+
+.featureContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6vw;
 }
