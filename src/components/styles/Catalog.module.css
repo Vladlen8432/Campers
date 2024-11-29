@@ -1,0 +1,42 @@
+.containerCatalog {
+  display: flex;
+  gap: 4.4vw;
+  padding-right: 4.4vw;
+  padding-left: 4.4vw;
+}
+
+.containerFilter {
+  background-color: burlywood;
+  width: 360px;
+}
+
+.containerContent {
+  background-color: chartreuse;
+  width: 100%;
+}
+
+.listItemCamper {
+  display: flex;
+  gap: 1.7vw;
+  padding: 1.7vw;
+}
+
+.imageCamper {
+  width: 292px;
+  height: 320px;
+  object-fit: cover;
+}
+
+.camperOverlay {
+  width: 100%;
+}
+
+.namePrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceFavorite {
+  display: flex;
+  gap: 1vw;
+}

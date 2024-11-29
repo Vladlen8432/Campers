@@ -2,7 +2,6 @@
   background-image: url("../../images/home/bg-img.jpg");
   background-size: cover;
   background-position: center;
-  overflow-x: hidden;
   padding: 37vh 0 37vh 4.4vw;
 }
 
@@ -25,7 +24,7 @@
   margin-bottom: 5.7vh;
 }
 
-.buttonHome {
+.viewNow {
   display: flex;
   width: 173px;
   padding-top: 16px;
@@ -43,7 +42,7 @@
   transition: background-color 0.3s ease;
 }
 
-.buttonHome:hover,
-.buttonHome:focus {
+.viewNow:hover,
+.viewNow:focus {
   background-color: #d84343;
 }

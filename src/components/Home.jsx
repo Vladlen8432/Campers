@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import css from "./styles/Home.module.css";
 
 const Home = () => {
@@ -7,9 +8,9 @@ const Home = () => {
       <p className={css.descriptionHome}>
         You can find everything you want in our catalog
       </p>
-      <button className={css.buttonHome} type="button">
+      <NavLink className={css.viewNow} to="/campers">
         View Now
-      </button>
+      </NavLink>
     </div>
   );
 };

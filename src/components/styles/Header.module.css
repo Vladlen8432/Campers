@@ -1,7 +1,8 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 28px 0 28px 64px;
+  padding: 3.33vh 4.4vw 3.33vh 4.4vw;
+  background-color: #f2f4f7;
 }
 
 .logo {
