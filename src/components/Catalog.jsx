@@ -53,11 +53,28 @@ const Catalog = () => {
                 />
                 <div className={css.camperOverlay}>
                   <div className={css.namePrice}>
-                    <h2>{camper.name}</h2>
+                    <h3>{camper.name}</h3>
                     <div className={css.priceFavorite}>
-                      <h2 className={css.price}>{camper.price}</h2>
+                      <h3 className={css.price}>{camper.price}</h3>
                       <img src="" alt="heart" />
                     </div>
+                  </div>
+
+                  <div className={css.containerReviewsLocation}>
+                    <p className={css.reviews}>
+                      <span>
+                        <img src="" alt="star" />
+                      </span>
+                      {camper.reviews.length > 0
+                        ? `${(
+                            camper.reviews.reduce(
+                              (sum, review) => sum + review.reviewer_rating,
+                              0
+                            ) / camper.reviews.length
+                          ).toFixed(1)} (${camper.reviews.length} Reviews)`
+                        : "No Reviews"}
+                    </p>
+                    <p className={css.location}>{camper.location}</p>
                   </div>
 
                   <p className={css.camperDescription}>{camper.description}</p>
@@ -85,8 +102,8 @@ const Catalog = () => {
                         </div>
                       ))}
                   </div>
+                  <Link to={camper.id.toString()}>Show more</Link>
                 </div>
-                <Link to={`/campers/:camperId`}>Show more</Link>
               </li>
             ))}
           </ul>

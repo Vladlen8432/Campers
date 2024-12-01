@@ -1,0 +1,9 @@
+.imgGallery {
+  width: 20.3vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.imageGalleryList {
+  display: flex;
+}
