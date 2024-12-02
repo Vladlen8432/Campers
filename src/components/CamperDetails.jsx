@@ -6,8 +6,6 @@ import FormComponent from "./Form";
 
 const CamperDetails = () => {
   const params = useParams();
-  console.log(params);
-
   const [camper, setCamper] = useState(null);
 
   useEffect(() => {
