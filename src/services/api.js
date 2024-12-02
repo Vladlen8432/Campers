@@ -13,6 +13,10 @@ export const fetchCampers = async () => {
 };
 
 export const fetchCamperById = async (id) => {
-  const response = await axios.get(`${BASE_URL}/campers/${id}`);
-  return response.data;
+  try {
+    const response = await axios.get(`${BASE_URL}/campers/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching camper:", error.message);
+  }
 };
